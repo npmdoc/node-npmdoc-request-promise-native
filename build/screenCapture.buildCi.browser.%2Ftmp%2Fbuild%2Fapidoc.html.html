@@ -1,0 +1,2739 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/request/request-promise-native#readme">request-promise-native (v1.0.3)</a>
+</h1>
+<h4>The simplified HTTP request client 'request' with Promise support. Powered by native ES6 promises.</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.request-promise-native">module request-promise-native</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.request-promise-native">
+            function <span class="apidocSignatureSpan"></span>request-promise-native
+            <span class="apidocSignatureSpan">(uri, options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.Request">
+            function <span class="apidocSignatureSpan">request-promise-native.</span>Request
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.cookie">
+            function <span class="apidocSignatureSpan">request-promise-native.</span>cookie
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.defaults">
+            function <span class="apidocSignatureSpan">request-promise-native.</span>defaults
+            <span class="apidocSignatureSpan">(options, requester)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.del">
+            function <span class="apidocSignatureSpan">request-promise-native.</span>del
+            <span class="apidocSignatureSpan">(uri, options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.delete">
+            function <span class="apidocSignatureSpan">request-promise-native.</span>delete
+            <span class="apidocSignatureSpan">(uri, options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.forever">
+            function <span class="apidocSignatureSpan">request-promise-native.</span>forever
+            <span class="apidocSignatureSpan">(agentOptions, optionsArg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.get">
+            function <span class="apidocSignatureSpan">request-promise-native.</span>get
+            <span class="apidocSignatureSpan">(uri, options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.head">
+            function <span class="apidocSignatureSpan">request-promise-native.</span>head
+            <span class="apidocSignatureSpan">(uri, options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.initParams">
+            function <span class="apidocSignatureSpan">request-promise-native.</span>initParams
+            <span class="apidocSignatureSpan">(uri, options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.jar">
+            function <span class="apidocSignatureSpan">request-promise-native.</span>jar
+            <span class="apidocSignatureSpan">(store)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.patch">
+            function <span class="apidocSignatureSpan">request-promise-native.</span>patch
+            <span class="apidocSignatureSpan">(uri, options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.post">
+            function <span class="apidocSignatureSpan">request-promise-native.</span>post
+            <span class="apidocSignatureSpan">(uri, options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.put">
+            function <span class="apidocSignatureSpan">request-promise-native.</span>put
+            <span class="apidocSignatureSpan">(uri, options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.rp">
+            function <span class="apidocSignatureSpan">request-promise-native.</span>rp
+            <span class="apidocSignatureSpan">(uri, options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">request-promise-native.</span>Request.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">request-promise-native.</span>errors</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.request-promise-native.Request">module request-promise-native.Request</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.Request.Request">
+            function <span class="apidocSignatureSpan">request-promise-native.</span>Request
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.Request.super_">
+            function <span class="apidocSignatureSpan">request-promise-native.Request.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">request-promise-native.Request.</span>defaultProxyHeaderExclusiveList</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">request-promise-native.Request.</span>defaultProxyHeaderWhiteList</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.request-promise-native.Request.prototype">module request-promise-native.Request.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.Request.prototype.abort">
+            function <span class="apidocSignatureSpan">request-promise-native.Request.prototype.</span>abort
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.Request.prototype.auth">
+            function <span class="apidocSignatureSpan">request-promise-native.Request.prototype.</span>auth
+            <span class="apidocSignatureSpan">(user, pass, sendImmediately, bearer)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.Request.prototype.aws">
+            function <span class="apidocSignatureSpan">request-promise-native.Request.prototype.</span>aws
+            <span class="apidocSignatureSpan">(opts, now)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.Request.prototype.catch">
+            function <span class="apidocSignatureSpan">request-promise-native.Request.prototype.</span>catch
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.Request.prototype.debug">
+            function <span class="apidocSignatureSpan">request-promise-native.Request.prototype.</span>debug
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.Request.prototype.destroy">
+            function <span class="apidocSignatureSpan">request-promise-native.Request.prototype.</span>destroy
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.Request.prototype.enableUnixSocket">
+            function <span class="apidocSignatureSpan">request-promise-native.Request.prototype.</span>enableUnixSocket
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.Request.prototype.end">
+            function <span class="apidocSignatureSpan">request-promise-native.Request.prototype.</span>end
+            <span class="apidocSignatureSpan">(chunk)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.Request.prototype.form">
+            function <span class="apidocSignatureSpan">request-promise-native.Request.prototype.</span>form
+            <span class="apidocSignatureSpan">(form)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.Request.prototype.getHeader">
+            function <span class="apidocSignatureSpan">request-promise-native.Request.prototype.</span>getHeader
+            <span class="apidocSignatureSpan">(name, headers)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.Request.prototype.getNewAgent">
+            function <span class="apidocSignatureSpan">request-promise-native.Request.prototype.</span>getNewAgent
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.Request.prototype.hawk">
+            function <span class="apidocSignatureSpan">request-promise-native.Request.prototype.</span>hawk
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.Request.prototype.httpSignature">
+            function <span class="apidocSignatureSpan">request-promise-native.Request.prototype.</span>httpSignature
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.Request.prototype.init">
+            function <span class="apidocSignatureSpan">request-promise-native.Request.prototype.</span>init
+            <span class="apidocSignatureSpan">(requestOptions)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.Request.prototype.jar">
+            function <span class="apidocSignatureSpan">request-promise-native.Request.prototype.</span>jar
+            <span class="apidocSignatureSpan">(jar)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.Request.prototype.json">
+            function <span class="apidocSignatureSpan">request-promise-native.Request.prototype.</span>json
+            <span class="apidocSignatureSpan">(val)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.Request.prototype.multipart">
+            function <span class="apidocSignatureSpan">request-promise-native.Request.prototype.</span>multipart
+            <span class="apidocSignatureSpan">(multipart)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.Request.prototype.oauth">
+            function <span class="apidocSignatureSpan">request-promise-native.Request.prototype.</span>oauth
+            <span class="apidocSignatureSpan">(_oauth)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.Request.prototype.onRequestError">
+            function <span class="apidocSignatureSpan">request-promise-native.Request.prototype.</span>onRequestError
+            <span class="apidocSignatureSpan">(error)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.Request.prototype.onRequestResponse">
+            function <span class="apidocSignatureSpan">request-promise-native.Request.prototype.</span>onRequestResponse
+            <span class="apidocSignatureSpan">(response)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.Request.prototype.pause">
+            function <span class="apidocSignatureSpan">request-promise-native.Request.prototype.</span>pause
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.Request.prototype.pipe">
+            function <span class="apidocSignatureSpan">request-promise-native.Request.prototype.</span>pipe
+            <span class="apidocSignatureSpan">(dest, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.Request.prototype.pipeDest">
+            function <span class="apidocSignatureSpan">request-promise-native.Request.prototype.</span>pipeDest
+            <span class="apidocSignatureSpan">(dest)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.Request.prototype.promise">
+            function <span class="apidocSignatureSpan">request-promise-native.Request.prototype.</span>promise
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.Request.prototype.qs">
+            function <span class="apidocSignatureSpan">request-promise-native.Request.prototype.</span>qs
+            <span class="apidocSignatureSpan">(q, clobber)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.Request.prototype.readResponseBody">
+            function <span class="apidocSignatureSpan">request-promise-native.Request.prototype.</span>readResponseBody
+            <span class="apidocSignatureSpan">(response)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.Request.prototype.resume">
+            function <span class="apidocSignatureSpan">request-promise-native.Request.prototype.</span>resume
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.Request.prototype.start">
+            function <span class="apidocSignatureSpan">request-promise-native.Request.prototype.</span>start
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.Request.prototype.then">
+            function <span class="apidocSignatureSpan">request-promise-native.Request.prototype.</span>then
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.Request.prototype.toJSON">
+            function <span class="apidocSignatureSpan">request-promise-native.Request.prototype.</span>toJSON
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.Request.prototype.write">
+            function <span class="apidocSignatureSpan">request-promise-native.Request.prototype.</span>write
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.request-promise-native.errors">module request-promise-native.errors</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.errors.RequestError">
+            function <span class="apidocSignatureSpan">request-promise-native.errors.</span>RequestError
+            <span class="apidocSignatureSpan">(cause, options, response)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.errors.StatusCodeError">
+            function <span class="apidocSignatureSpan">request-promise-native.errors.</span>StatusCodeError
+            <span class="apidocSignatureSpan">(statusCode, body, options, response)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.errors.TransformError">
+            function <span class="apidocSignatureSpan">request-promise-native.errors.</span>TransformError
+            <span class="apidocSignatureSpan">(cause, options, response)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.request-promise-native.rp">module request-promise-native.rp</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.rp.rp">
+            function <span class="apidocSignatureSpan">request-promise-native.</span>rp
+            <span class="apidocSignatureSpan">(uri, options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.rp.Request">
+            function <span class="apidocSignatureSpan">request-promise-native.rp.</span>Request
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.rp.cookie">
+            function <span class="apidocSignatureSpan">request-promise-native.rp.</span>cookie
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.rp.defaults">
+            function <span class="apidocSignatureSpan">request-promise-native.rp.</span>defaults
+            <span class="apidocSignatureSpan">(options, requester)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.rp.del">
+            function <span class="apidocSignatureSpan">request-promise-native.rp.</span>del
+            <span class="apidocSignatureSpan">(uri, options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.rp.delete">
+            function <span class="apidocSignatureSpan">request-promise-native.rp.</span>delete
+            <span class="apidocSignatureSpan">(uri, options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.rp.forever">
+            function <span class="apidocSignatureSpan">request-promise-native.rp.</span>forever
+            <span class="apidocSignatureSpan">(agentOptions, optionsArg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.rp.get">
+            function <span class="apidocSignatureSpan">request-promise-native.rp.</span>get
+            <span class="apidocSignatureSpan">(uri, options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.rp.head">
+            function <span class="apidocSignatureSpan">request-promise-native.rp.</span>head
+            <span class="apidocSignatureSpan">(uri, options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.rp.initParams">
+            function <span class="apidocSignatureSpan">request-promise-native.rp.</span>initParams
+            <span class="apidocSignatureSpan">(uri, options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.rp.jar">
+            function <span class="apidocSignatureSpan">request-promise-native.rp.</span>jar
+            <span class="apidocSignatureSpan">(store)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.rp.patch">
+            function <span class="apidocSignatureSpan">request-promise-native.rp.</span>patch
+            <span class="apidocSignatureSpan">(uri, options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.rp.post">
+            function <span class="apidocSignatureSpan">request-promise-native.rp.</span>post
+            <span class="apidocSignatureSpan">(uri, options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.request-promise-native.rp.put">
+            function <span class="apidocSignatureSpan">request-promise-native.rp.</span>put
+            <span class="apidocSignatureSpan">(uri, options, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.request-promise-native" id="apidoc.module.request-promise-native">module request-promise-native</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.request-promise-native" id="apidoc.element.request-promise-native.request-promise-native">
+        function <span class="apidocSignatureSpan"></span>request-promise-native
+        <span class="apidocSignatureSpan">(uri, options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function request(uri, options, callback) {
+  if (typeof uri === 'undefined') {
+    throw new Error('undefined is not a valid uri or options object.')
+  }
+
+  var params = initParams(uri, options, callback)
+
+  if (params.method === 'HEAD' &amp;&amp; paramsHaveRequestBody(params)) {
+    throw new Error('HTTP HEAD requests MUST NOT include a request body.')
+  }
+
+  return new request.Request(params)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.Request" id="apidoc.element.request-promise-native.Request">
+        function <span class="apidocSignatureSpan">request-promise-native.</span>Request
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Request(options) {
+  // if given the method property in options, set property explicitMethod to true
+
+  // extend the Request instance with any non-reserved properties
+  // remove any reserved functions from the options object
+  // set Request instance to be readable and writable
+  // call init
+
+  var self = this
+
+  // start with HAR, then override with additional options
+  if (options.har) {
+    self._har = new Har(self)
+    options = self._har.options(options)
+  }
+
+  stream.Stream.call(self)
+  var reserved = Object.keys(Request.prototype)
+  var nonReserved = filterForNonReserved(reserved, options)
+
+  extend(self, nonReserved)
+  options = filterOutReservedFunctions(reserved, options)
+
+  self.readable = true
+  self.writable = true
+  if (options.method) {
+    self.explicitMethod = true
+  }
+  self._qs = new Querystring(self)
+  self._auth = new Auth(self)
+  self._oauth = new OAuth(self)
+  self._multipart = new Multipart(self)
+  self._redirect = new Redirect(self)
+  self._tunnel = new Tunnel(self)
+  self.init(options)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.cookie" id="apidoc.element.request-promise-native.cookie">
+        function <span class="apidocSignatureSpan">request-promise-native.</span>cookie
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">cookie = function (str) {
+  return cookies.parse(str)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.defaults" id="apidoc.element.request-promise-native.defaults">
+        function <span class="apidocSignatureSpan">request-promise-native.</span>defaults
+        <span class="apidocSignatureSpan">(options, requester)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">defaults = function (options, requester) {
+  var self = this
+
+  options = options || {}
+
+  if (typeof options === 'function') {
+    requester = options
+    options = {}
+  }
+
+  var defaults      = wrapRequestMethod(self, options, requester)
+
+  var verbs = ['get', 'head', 'post', 'put', 'patch', 'del', 'delete']
+  verbs.forEach(function(verb) {
+    defaults[verb]  = wrapRequestMethod(self[verb], options, requester, verb)
+  })
+
+  defaults.cookie   = wrapRequestMethod(self.cookie, options, requester)
+  defaults.jar      = self.jar
+  defaults.defaults = self.defaults
+  return defaults
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.del" id="apidoc.element.request-promise-native.del">
+        function <span class="apidocSignatureSpan">request-promise-native.</span>del
+        <span class="apidocSignatureSpan">(uri, options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">del = function (uri, options, callback) {
+  var params = initParams(uri, options, callback)
+  params.method = method
+  return request(params, params.callback)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.delete" id="apidoc.element.request-promise-native.delete">
+        function <span class="apidocSignatureSpan">request-promise-native.</span>delete
+        <span class="apidocSignatureSpan">(uri, options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">delete = function (uri, options, callback) {
+  var params = initParams(uri, options, callback)
+  params.method = method
+  return request(params, params.callback)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.forever" id="apidoc.element.request-promise-native.forever">
+        function <span class="apidocSignatureSpan">request-promise-native.</span>forever
+        <span class="apidocSignatureSpan">(agentOptions, optionsArg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">forever = function (agentOptions, optionsArg) {
+  var options = {}
+  if (optionsArg) {
+    extend(options, optionsArg)
+  }
+  if (agentOptions) {
+    options.agentOptions = agentOptions
+  }
+
+  options.forever = true
+  return request.defaults(options)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.get" id="apidoc.element.request-promise-native.get">
+        function <span class="apidocSignatureSpan">request-promise-native.</span>get
+        <span class="apidocSignatureSpan">(uri, options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get = function (uri, options, callback) {
+  var params = initParams(uri, options, callback)
+  params.method = method
+  return request(params, params.callback)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.head" id="apidoc.element.request-promise-native.head">
+        function <span class="apidocSignatureSpan">request-promise-native.</span>head
+        <span class="apidocSignatureSpan">(uri, options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">head = function (uri, options, callback) {
+  var params = initParams(uri, options, callback)
+  params.method = method
+  return request(params, params.callback)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.initParams" id="apidoc.element.request-promise-native.initParams">
+        function <span class="apidocSignatureSpan">request-promise-native.</span>initParams
+        <span class="apidocSignatureSpan">(uri, options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function initParams(uri, options, callback) {
+  if (typeof options === 'function') {
+    callback = options
+  }
+
+  var params = {}
+  if (typeof options === 'object') {
+    extend(params, options, {uri: uri})
+  } else if (typeof uri === 'string') {
+    extend(params, {uri: uri})
+  } else {
+    extend(params, uri)
+  }
+
+  params.callback = callback || params.callback
+  return params
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.jar" id="apidoc.element.request-promise-native.jar">
+        function <span class="apidocSignatureSpan">request-promise-native.</span>jar
+        <span class="apidocSignatureSpan">(store)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">jar = function (store) {
+  return cookies.jar(store)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.patch" id="apidoc.element.request-promise-native.patch">
+        function <span class="apidocSignatureSpan">request-promise-native.</span>patch
+        <span class="apidocSignatureSpan">(uri, options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">patch = function (uri, options, callback) {
+  var params = initParams(uri, options, callback)
+  params.method = method
+  return request(params, params.callback)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.post" id="apidoc.element.request-promise-native.post">
+        function <span class="apidocSignatureSpan">request-promise-native.</span>post
+        <span class="apidocSignatureSpan">(uri, options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">post = function (uri, options, callback) {
+  var params = initParams(uri, options, callback)
+  params.method = method
+  return request(params, params.callback)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.put" id="apidoc.element.request-promise-native.put">
+        function <span class="apidocSignatureSpan">request-promise-native.</span>put
+        <span class="apidocSignatureSpan">(uri, options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">put = function (uri, options, callback) {
+  var params = initParams(uri, options, callback)
+  params.method = method
+  return request(params, params.callback)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.rp" id="apidoc.element.request-promise-native.rp">
+        function <span class="apidocSignatureSpan">request-promise-native.</span>rp
+        <span class="apidocSignatureSpan">(uri, options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function request(uri, options, callback) {
+  if (typeof uri === 'undefined') {
+    throw new Error('undefined is not a valid uri or options object.')
+  }
+
+  var params = initParams(uri, options, callback)
+
+  if (params.method === 'HEAD' &amp;&amp; paramsHaveRequestBody(params)) {
+    throw new Error('HTTP HEAD requests MUST NOT include a request body.')
+  }
+
+  return new request.Request(params)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.request-promise-native.Request" id="apidoc.module.request-promise-native.Request">module request-promise-native.Request</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.Request.Request" id="apidoc.element.request-promise-native.Request.Request">
+        function <span class="apidocSignatureSpan">request-promise-native.</span>Request
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Request(options) {
+  // if given the method property in options, set property explicitMethod to true
+
+  // extend the Request instance with any non-reserved properties
+  // remove any reserved functions from the options object
+  // set Request instance to be readable and writable
+  // call init
+
+  var self = this
+
+  // start with HAR, then override with additional options
+  if (options.har) {
+    self._har = new Har(self)
+    options = self._har.options(options)
+  }
+
+  stream.Stream.call(self)
+  var reserved = Object.keys(Request.prototype)
+  var nonReserved = filterForNonReserved(reserved, options)
+
+  extend(self, nonReserved)
+  options = filterOutReservedFunctions(reserved, options)
+
+  self.readable = true
+  self.writable = true
+  if (options.method) {
+    self.explicitMethod = true
+  }
+  self._qs = new Querystring(self)
+  self._auth = new Auth(self)
+  self._oauth = new OAuth(self)
+  self._multipart = new Multipart(self)
+  self._redirect = new Redirect(self)
+  self._tunnel = new Tunnel(self)
+  self.init(options)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.Request.super_" id="apidoc.element.request-promise-native.Request.super_">
+        function <span class="apidocSignatureSpan">request-promise-native.Request.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Stream() {
+  EE.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.request-promise-native.Request.prototype" id="apidoc.module.request-promise-native.Request.prototype">module request-promise-native.Request.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.Request.prototype.abort" id="apidoc.element.request-promise-native.Request.prototype.abort">
+        function <span class="apidocSignatureSpan">request-promise-native.Request.prototype.</span>abort
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">abort = function () {
+  var self = this
+  self._aborted = true
+
+  if (self.req) {
+    self.req.abort()
+  }
+  else if (self.response) {
+    self.response.destroy()
+  }
+
+  self.emit('abort')
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.Request.prototype.auth" id="apidoc.element.request-promise-native.Request.prototype.auth">
+        function <span class="apidocSignatureSpan">request-promise-native.Request.prototype.</span>auth
+        <span class="apidocSignatureSpan">(user, pass, sendImmediately, bearer)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">auth = function (user, pass, sendImmediately, bearer) {
+  var self = this
+
+  self._auth.onRequest(user, pass, sendImmediately, bearer)
+
+  return self
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.Request.prototype.aws" id="apidoc.element.request-promise-native.Request.prototype.aws">
+        function <span class="apidocSignatureSpan">request-promise-native.Request.prototype.</span>aws
+        <span class="apidocSignatureSpan">(opts, now)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">aws = function (opts, now) {
+  var self = this
+
+  if (!now) {
+    self._aws = opts
+    return self
+  }
+
+  if (opts.sign_version == 4 || opts.sign_version == '4') {
+    // use aws4
+    var options = {
+      host: self.uri.host,
+      path: self.uri.path,
+      method: self.method,
+      headers: {
+        'content-type': self.getHeader('content-type') || ''
+      },
+      body: self.body
+    }
+    var signRes = aws4.sign(options, {
+      accessKeyId: opts.key,
+      secretAccessKey: opts.secret,
+      sessionToken: opts.session
+    })
+    self.setHeader('authorization', signRes.headers.Authorization)
+    self.setHeader('x-amz-date', signRes.headers['X-Amz-Date'])
+    if (signRes.headers['X-Amz-Security-Token']) {
+      self.setHeader('x-amz-security-token', signRes.headers['X-Amz-Security-Token'])
+    }
+  }
+  else {
+    // default: use aws-sign2
+    var date = new Date()
+    self.setHeader('date', date.toUTCString())
+    var auth =
+      { key: opts.key
+      , secret: opts.secret
+      , verb: self.method.toUpperCase()
+      , date: date
+      , contentType: self.getHeader('content-type') || ''
+      , md5: self.getHeader('content-md5') || ''
+      , amazonHeaders: aws2.canonicalizeHeaders(self.headers)
+      }
+    var path = self.uri.path
+    if (opts.bucket &amp;&amp; path) {
+      auth.resource = '/' + opts.bucket + path
+    } else if (opts.bucket &amp;&amp; !path) {
+      auth.resource = '/' + opts.bucket
+    } else if (!opts.bucket &amp;&amp; path) {
+      auth.resource = path
+    } else if (!opts.bucket &amp;&amp; !path) {
+      auth.resource = '/'
+    }
+    auth.resource = aws2.canonicalizeResource(auth.resource)
+    self.setHeader('authorization', aws2.authorization(auth))
+  }
+
+  return self
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.Request.prototype.catch" id="apidoc.element.request-promise-native.Request.prototype.catch">
+        function <span class="apidocSignatureSpan">request-promise-native.Request.prototype.</span>catch
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function RP$exposed() {
+    var self = bindTo || this;
+    return self[promisePropertyKey][methodToExpose].apply(self[promisePropertyKey], arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.Request.prototype.debug" id="apidoc.element.request-promise-native.Request.prototype.debug">
+        function <span class="apidocSignatureSpan">request-promise-native.Request.prototype.</span>debug
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function debug() {
+  if (Request.debug) {
+    console.error('REQUEST %s', util.format.apply(util, arguments))
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.Request.prototype.destroy" id="apidoc.element.request-promise-native.Request.prototype.destroy">
+        function <span class="apidocSignatureSpan">request-promise-native.Request.prototype.</span>destroy
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">destroy = function () {
+  var self = this
+  if (!self._ended) {
+    self.end()
+  } else if (self.response) {
+    self.response.destroy()
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.Request.prototype.enableUnixSocket" id="apidoc.element.request-promise-native.Request.prototype.enableUnixSocket">
+        function <span class="apidocSignatureSpan">request-promise-native.Request.prototype.</span>enableUnixSocket
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">enableUnixSocket = function () {
+  // Get the socket &amp; request paths from the URL
+  var unixParts = this.uri.path.split(':')
+    , host = unixParts[0]
+    , path = unixParts[1]
+  // Apply unix properties to request
+  this.socketPath = host
+  this.uri.pathname = path
+  this.uri.path = path
+  this.uri.host = host
+  this.uri.hostname = host
+  this.uri.isUnix = true
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.Request.prototype.end" id="apidoc.element.request-promise-native.Request.prototype.end">
+        function <span class="apidocSignatureSpan">request-promise-native.Request.prototype.</span>end
+        <span class="apidocSignatureSpan">(chunk)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">end = function (chunk) {
+  var self = this
+  if (self._aborted) {return}
+
+  if (chunk) {
+    self.write(chunk)
+  }
+  if (!self._started) {
+    self.start()
+  }
+  if (self.req) {
+    self.req.end()
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.Request.prototype.form" id="apidoc.element.request-promise-native.Request.prototype.form">
+        function <span class="apidocSignatureSpan">request-promise-native.Request.prototype.</span>form
+        <span class="apidocSignatureSpan">(form)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">form = function (form) {
+  var self = this
+  if (form) {
+    if (!/^application\/x-www-form-urlencoded\b/.test(self.getHeader('content-type'))) {
+      self.setHeader('content-type', 'application/x-www-form-urlencoded')
+    }
+    self.body = (typeof form === 'string')
+      ? self._qs.rfc3986(form.toString('utf8'))
+      : self._qs.stringify(form).toString('utf8')
+    return self
+  }
+  // create form-data object
+  self._form = new FormData()
+  self._form.on('error', function(err) {
+    err.message = 'form-data: ' + err.message
+    self.emit('error', err)
+    self.abort()
+  })
+  return self._form
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.Request.prototype.getHeader" id="apidoc.element.request-promise-native.Request.prototype.getHeader">
+        function <span class="apidocSignatureSpan">request-promise-native.Request.prototype.</span>getHeader
+        <span class="apidocSignatureSpan">(name, headers)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getHeader = function (name, headers) {
+  var self = this
+  var result, re, match
+  if (!headers) {
+    headers = self.headers
+  }
+  Object.keys(headers).forEach(function (key) {
+    if (key.length !== name.length) {
+      return
+    }
+    re = new RegExp(name, 'i')
+    match = key.match(re)
+    if (match) {
+      result = headers[key]
+    }
+  })
+  return result
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.Request.prototype.getNewAgent" id="apidoc.element.request-promise-native.Request.prototype.getNewAgent">
+        function <span class="apidocSignatureSpan">request-promise-native.Request.prototype.</span>getNewAgent
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getNewAgent = function () {
+  var self = this
+  var Agent = self.agentClass
+  var options = {}
+  if (self.agentOptions) {
+    for (var i in self.agentOptions) {
+      options[i] = self.agentOptions[i]
+    }
+  }
+  if (self.ca) {
+    options.ca = self.ca
+  }
+  if (self.ciphers) {
+    options.ciphers = self.ciphers
+  }
+  if (self.secureProtocol) {
+    options.secureProtocol = self.secureProtocol
+  }
+  if (self.secureOptions) {
+    options.secureOptions = self.secureOptions
+  }
+  if (typeof self.rejectUnauthorized !== 'undefined') {
+    options.rejectUnauthorized = self.rejectUnauthorized
+  }
+
+  if (self.cert &amp;&amp; self.key) {
+    options.key = self.key
+    options.cert = self.cert
+  }
+
+  if (self.pfx) {
+    options.pfx = self.pfx
+  }
+
+  if (self.passphrase) {
+    options.passphrase = self.passphrase
+  }
+
+  var poolKey = ''
+
+  // different types of agents are in different pools
+  if (Agent !== self.httpModule.Agent) {
+    poolKey += Agent.name
+  }
+
+  // ca option is only relevant if proxy or destination are https
+  var proxy = self.proxy
+  if (typeof proxy === 'string') {
+    proxy = url.parse(proxy)
+  }
+  var isHttps = (proxy &amp;&amp; proxy.protocol === 'https:') || this.uri.protocol === 'https:'
+
+  if (isHttps) {
+    if (options.ca) {
+      if (poolKey) {
+        poolKey += ':'
+      }
+      poolKey += options.ca
+    }
+
+    if (typeof options.rejectUnauthorized !== 'undefined') {
+      if (poolKey) {
+        poolKey += ':'
+      }
+      poolKey += options.rejectUnauthorized
+    }
+
+    if (options.cert) {
+      if (poolKey) {
+        poolKey += ':'
+      }
+      poolKey += options.cert.toString('ascii') + options.key.toString('ascii')
+    }
+
+    if (options.pfx) {
+      if (poolKey) {
+        poolKey += ':'
+      }
+      poolKey += options.pfx.toString('ascii')
+    }
+
+    if (options.ciphers) {
+      if (poolKey) {
+        poolKey += ':'
+      }
+      poolKey += options.ciphers
+    }
+
+    if (options.secureProtocol) {
+      if (poolKey) {
+        poolKey += ':'
+      }
+      poolKey += options.secureProtocol
+    }
+
+    if (options.secureOptions) {
+      if (poolKey) {
+        poolKey += ':'
+      }
+      poolKey += options.secureOptions
+    }
+  }
+
+  if (self.pool === globalPool &amp;&amp; !poolKey &amp;&amp; Object.keys(options).length === 0 &amp;&amp; self.httpModule.globalAgent) {
+    // not doing anything special.  Use the globalAgent
+    return self.httpModule.globalAgent
+  }
+
+  // we're using a stored agent.  Make sure it's protocol-specific
+  poolKey = self.uri.protocol + poolKey
+
+  // generate a new agent for this setting if none yet exists
+  if (!self.pool[poolKey]) {
+    self.pool[poolKey] = new Agent(options)
+    // properly set maxSockets on new agents
+    if (self.pool.maxSockets) {
+      self.pool[poolKey].maxSockets = self.pool.maxSockets
+    }
+  }
+
+  return self.pool[poolKey]
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.Request.prototype.hawk" id="apidoc.element.request-promise-native.Request.prototype.hawk">
+        function <span class="apidocSignatureSpan">request-promise-native.Request.prototype.</span>hawk
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hawk = function (opts) {
+  var self = this
+  self.setHeader('Authorization', hawk.client.header(self.uri, self.method, opts).field)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.Request.prototype.httpSignature" id="apidoc.element.request-promise-native.Request.prototype.httpSignature">
+        function <span class="apidocSignatureSpan">request-promise-native.Request.prototype.</span>httpSignature
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">httpSignature = function (opts) {
+  var self = this
+  httpSignature.signRequest({
+    getHeader: function(header) {
+      return self.getHeader(header, self.headers)
+    },
+    setHeader: function(header, value) {
+      self.setHeader(header, value)
+    },
+    method: self.method,
+    path: self.path
+  }, opts)
+  debug('httpSignature authorization', self.getHeader('authorization'))
+
+  return self
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.Request.prototype.init" id="apidoc.element.request-promise-native.Request.prototype.init">
+        function <span class="apidocSignatureSpan">request-promise-native.Request.prototype.</span>init
+        <span class="apidocSignatureSpan">(requestOptions)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function RP$initInterceptor(requestOptions) {
+
+    // Init may be called again - currently in case of redirects
+    if (isObjectLike(requestOptions) &amp;&amp; !this._callback &amp;&amp; !this._rp_promise) {
+
+        plumbing.init.call(this, requestOptions);
+
+    }
+
+    return originalInit.apply(this, arguments);
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.Request.prototype.jar" id="apidoc.element.request-promise-native.Request.prototype.jar">
+        function <span class="apidocSignatureSpan">request-promise-native.Request.prototype.</span>jar
+        <span class="apidocSignatureSpan">(jar)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">jar = function (jar) {
+  var self = this
+  var cookies
+
+  if (self._redirect.redirectsFollowed === 0) {
+    self.originalCookieHeader = self.getHeader('cookie')
+  }
+
+  if (!jar) {
+    // disable cookies
+    cookies = false
+    self._disableCookies = true
+  } else {
+    var targetCookieJar = (jar &amp;&amp; jar.getCookieString) ? jar : globalCookieJar
+    var urihref = self.uri.href
+    //fetch cookie in the Specified host
+    if (targetCookieJar) {
+      cookies = targetCookieJar.getCookieString(urihref)
+    }
+  }
+
+  //if need cookie and cookie is not empty
+  if (cookies &amp;&amp; cookies.length) {
+    if (self.originalCookieHeader) {
+      // Don't overwrite existing Cookie header
+      self.setHeader('cookie', self.originalCookieHeader + '; ' + cookies)
+    } else {
+      self.setHeader('cookie', cookies)
+    }
+  }
+  self._jar = jar
+  return self
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.Request.prototype.json" id="apidoc.element.request-promise-native.Request.prototype.json">
+        function <span class="apidocSignatureSpan">request-promise-native.Request.prototype.</span>json
+        <span class="apidocSignatureSpan">(val)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">json = function (val) {
+  var self = this
+
+  if (!self.hasHeader('accept')) {
+    self.setHeader('accept', 'application/json')
+  }
+
+  if (typeof self.jsonReplacer === 'function') {
+    self._jsonReplacer = self.jsonReplacer
+  }
+
+  self._json = true
+  if (typeof val === 'boolean') {
+    if (self.body !== undefined) {
+      if (!/^application\/x-www-form-urlencoded\b/.test(self.getHeader('content-type'))) {
+        self.body = safeStringify(self.body, self._jsonReplacer)
+      } else {
+        self.body = self._qs.rfc3986(self.body)
+      }
+      if (!self.hasHeader('content-type')) {
+        self.setHeader('content-type', 'application/json')
+      }
+    }
+  } else {
+    self.body = safeStringify(val, self._jsonReplacer)
+    if (!self.hasHeader('content-type')) {
+      self.setHeader('content-type', 'application/json')
+    }
+  }
+
+  if (typeof self.jsonReviver === 'function') {
+    self._jsonReviver = self.jsonReviver
+  }
+
+  return self
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.Request.prototype.multipart" id="apidoc.element.request-promise-native.Request.prototype.multipart">
+        function <span class="apidocSignatureSpan">request-promise-native.Request.prototype.</span>multipart
+        <span class="apidocSignatureSpan">(multipart)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">multipart = function (multipart) {
+  var self = this
+
+  self._multipart.onRequest(multipart)
+
+  if (!self._multipart.chunked) {
+    self.body = self._multipart.body
+  }
+
+  return self
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.Request.prototype.oauth" id="apidoc.element.request-promise-native.Request.prototype.oauth">
+        function <span class="apidocSignatureSpan">request-promise-native.Request.prototype.</span>oauth
+        <span class="apidocSignatureSpan">(_oauth)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">oauth = function (_oauth) {
+  var self = this
+
+  self._oauth.onRequest(_oauth)
+
+  return self
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.Request.prototype.onRequestError" id="apidoc.element.request-promise-native.Request.prototype.onRequestError">
+        function <span class="apidocSignatureSpan">request-promise-native.Request.prototype.</span>onRequestError
+        <span class="apidocSignatureSpan">(error)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">onRequestError = function (error) {
+  var self = this
+  if (self._aborted) {
+    return
+  }
+  if (self.req &amp;&amp; self.req._reusedSocket &amp;&amp; error.code === 'ECONNRESET'
+      &amp;&amp; self.agent.addRequestNoreuse) {
+    self.agent = { addRequest: self.agent.addRequestNoreuse.bind(self.agent) }
+    self.start()
+    self.req.end()
+    return
+  }
+  if (self.timeout &amp;&amp; self.timeoutTimer) {
+    clearTimeout(self.timeoutTimer)
+    self.timeoutTimer = null
+  }
+  self.emit('error', error)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.Request.prototype.onRequestResponse" id="apidoc.element.request-promise-native.Request.prototype.onRequestResponse">
+        function <span class="apidocSignatureSpan">request-promise-native.Request.prototype.</span>onRequestResponse
+        <span class="apidocSignatureSpan">(response)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">onRequestResponse = function (response) {
+  var self = this
+
+  if (self.timing) {
+    self.timings.response = now() - self.startTimeNow
+  }
+
+  debug('onRequestResponse', self.uri.href, response.statusCode, response.headers)
+  response.on('end', function() {
+    if (self.timing) {
+      self.timings.end = now() - self.startTimeNow
+      response.timingStart = self.startTime
+
+      // fill in the blanks for any periods that didn't trigger, such as
+      // no lookup or connect due to keep alive
+      if (!self.timings.socket) {
+        self.timings.socket = 0
+      }
+      if (!self.timings.lookup) {
+        self.timings.lookup = self.timings.socket
+      }
+      if (!self.timings.connect) {
+        self.timings.connect = self.timings.lookup
+      }
+      if (!self.timings.response) {
+        self.timings.response = self.timings.connect
+      }
+
+      debug('elapsed time', self.timings.end)
+
+      // elapsedTime includes all redirects
+      self.elapsedTime += Math.round(self.timings.end)
+
+      // NOTE: elapsedTime is deprecated in favor of .timings
+      response.elapsedTime = self.elapsedTime
+
+      // timings is just for the final fetch
+      response.timings = self.timings
+
+      // pre-calculate phase timings as well
+      response.timingPhases = {
+        wait: self.timings.socket,
+        dns: self.timings.lookup - self.timings.socket,
+        tcp: self.timings.connect - self.timings.lookup,
+        firstByte: self.timings.response - self.timings.connect,
+        download: self.timings.end - self.timings.response,
+        total: self.timings.end
+      }
+    }
+    debug('response end', self.uri.href, response.statusCode, response.headers)
+  })
+
+  if (self._aborted) {
+    debug('aborted', self.uri.href)
+    response.resume()
+    return
+  }
+
+  self.response = response
+  response.request = self
+  response.toJSON = responseToJSON
+
+  // XXX This is different on 0.10, because SSL is strict by default
+  if (self.httpModule === https &amp;&amp;
+      self.strictSSL &amp;&amp; (!response.hasOwnProperty('socket') ||
+      !response.socket.authorized)) {
+    debug('strict ssl error', self.uri.href)
+    var sslErr = response.hasOwnProperty('socket') ? response.socket.authorizationError : self.uri.href + ' does not support SSL
+'
+    self.emit('error', new Error('SSL Error: ' + sslErr))
+    return
+  }
+
+  // Save the original host before any redirect (if it changes, we need to
+  // remove any authorization headers).  Also remember the case of the header
+  // name because lots of broken servers expect Host instead of host and we
+  // want the caller to be able to specify this.
+  self.originalHost = self.getHeader('host')
+  if (!self.originalHostHeaderName) {
+    self.originalHostHeaderName = self.hasHeader('host')
+  }
+  if (self.setHost) {
+    self.removeHeader('host')
+  }
+  if (self.timeout &amp;&amp; self.timeoutTimer) {
+    clearTimeout(self.timeoutTimer)
+    self.timeoutTimer = null
+  }
+
+  var targetCookieJar = (self._jar &amp;&amp; self._jar.setCookie) ? self._jar : globalCookieJar
+  var addCookie = function (cookie) {
+    //set the cookie if it's domain in the href's domain.
+    try {
+      targetCookieJar.setCookie(cookie, self.uri.href, {ignoreError: true})
+    } catch (e) {
+      self.emit('error', e)
+    }
+  }
+
+  response.caseless = caseless(response.headers)
+
+  if (response.caseless.has('set-cookie') &amp;&amp; (!self._disableCookies)) {
+    var headerName = response.caseless.has('set-cookie')
+    if (Array.isArray(response.headers[headerName])) {
+      response.headers[headerName].forEach(addCookie)
+    } else {
+      addCookie(response.headers[headerName])
+    }
+  }
+
+  if (self._redirect.onResponse(response)) {
+    return // Ignore the rest of the response
+  } else {
+    // Be a good stream and emit end when the response is finished.
+    // Hack to emit end on close because of a core bug that never fires end
+    response.on('close', function () {
+      if (!self._ended) {
+        self.response.emit('end')
+      }
+    })
+
+    response.once('end', function () {
+      self._ended = true
+    })
+
+    var noBody = function (code) {
+      return (
+        self.method === 'HEAD' ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.Request.prototype.pause" id="apidoc.element.request-promise-native.Request.prototype.pause">
+        function <span class="apidocSignatureSpan">request-promise-native.Request.prototype.</span>pause
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pause = function () {
+  var self = this
+  if (!self.responseContent) {
+    self._paused = true
+  } else {
+    self.responseContent.pause.apply(self.responseContent, arguments)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.Request.prototype.pipe" id="apidoc.element.request-promise-native.Request.prototype.pipe">
+        function <span class="apidocSignatureSpan">request-promise-native.Request.prototype.</span>pipe
+        <span class="apidocSignatureSpan">(dest, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pipe = function (dest, opts) {
+  var self = this
+
+  if (self.response) {
+    if (self._destdata) {
+      self.emit('error', new Error('You cannot pipe after data has been emitted from the response.'))
+    } else if (self._ended) {
+      self.emit('error', new Error('You cannot pipe after the response has been ended.'))
+    } else {
+      stream.Stream.prototype.pipe.call(self, dest, opts)
+      self.pipeDest(dest)
+      return dest
+    }
+  } else {
+    self.dests.push(dest)
+    stream.Stream.prototype.pipe.call(self, dest, opts)
+    return dest
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.Request.prototype.pipeDest" id="apidoc.element.request-promise-native.Request.prototype.pipeDest">
+        function <span class="apidocSignatureSpan">request-promise-native.Request.prototype.</span>pipeDest
+        <span class="apidocSignatureSpan">(dest)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pipeDest = function (dest) {
+  var self = this
+  var response = self.response
+  // Called after the response is received
+  if (dest.headers &amp;&amp; !dest.headersSent) {
+    if (response.caseless.has('content-type')) {
+      var ctname = response.caseless.has('content-type')
+      if (dest.setHeader) {
+        dest.setHeader(ctname, response.headers[ctname])
+      }
+      else {
+        dest.headers[ctname] = response.headers[ctname]
+      }
+    }
+
+    if (response.caseless.has('content-length')) {
+      var clname = response.caseless.has('content-length')
+      if (dest.setHeader) {
+        dest.setHeader(clname, response.headers[clname])
+      } else {
+        dest.headers[clname] = response.headers[clname]
+      }
+    }
+  }
+  if (dest.setHeader &amp;&amp; !dest.headersSent) {
+    for (var i in response.headers) {
+      // If the response content is being decoded, the Content-Encoding header
+      // of the response doesn't represent the piped content, so don't pass it.
+      if (!self.gzip || i !== 'content-encoding') {
+        dest.setHeader(i, response.headers[i])
+      }
+    }
+    dest.statusCode = response.statusCode
+  }
+  if (self.pipefilter) {
+    self.pipefilter(response, dest)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.Request.prototype.promise" id="apidoc.element.request-promise-native.Request.prototype.promise">
+        function <span class="apidocSignatureSpan">request-promise-native.Request.prototype.</span>promise
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function RP$promise() {
+    var self = bindTo || this;
+    return self[promisePropertyKey];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.Request.prototype.qs" id="apidoc.element.request-promise-native.Request.prototype.qs">
+        function <span class="apidocSignatureSpan">request-promise-native.Request.prototype.</span>qs
+        <span class="apidocSignatureSpan">(q, clobber)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">qs = function (q, clobber) {
+  var self = this
+  var base
+  if (!clobber &amp;&amp; self.uri.query) {
+    base = self._qs.parse(self.uri.query)
+  } else {
+    base = {}
+  }
+
+  for (var i in q) {
+    base[i] = q[i]
+  }
+
+  var qs = self._qs.stringify(base)
+
+  if (qs === '') {
+    return self
+  }
+
+  self.uri = url.parse(self.uri.href.split('?')[0] + '?' + qs)
+  self.url = self.uri
+  self.path = self.uri.path
+
+  if (self.uri.host === 'unix') {
+    self.enableUnixSocket()
+  }
+
+  return self
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.Request.prototype.readResponseBody" id="apidoc.element.request-promise-native.Request.prototype.readResponseBody">
+        function <span class="apidocSignatureSpan">request-promise-native.Request.prototype.</span>readResponseBody
+        <span class="apidocSignatureSpan">(response)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">readResponseBody = function (response) {
+  var self = this
+  debug('reading response\'s body')
+  var buffers = []
+    , bufferLength = 0
+    , strings = []
+
+  self.on('data', function (chunk) {
+    if (!Buffer.isBuffer(chunk)) {
+      strings.push(chunk)
+    } else if (chunk.length) {
+      bufferLength += chunk.length
+      buffers.push(chunk)
+    }
+  })
+  self.on('end', function () {
+    debug('end event', self.uri.href)
+    if (self._aborted) {
+      debug('aborted', self.uri.href)
+      // `buffer` is defined in the parent scope and used in a closure it exists for the life of the request.
+      // This can lead to leaky behavior if the user retains a reference to the request object.
+      buffers = []
+      bufferLength = 0
+      return
+    }
+
+    if (bufferLength) {
+      debug('has body', self.uri.href, bufferLength)
+      response.body = Buffer.concat(buffers, bufferLength)
+      if (self.encoding !== null) {
+        response.body = response.body.toString(self.encoding)
+      }
+      // `buffer` is defined in the parent scope and used in a closure it exists for the life of the Request.
+      // This can lead to leaky behavior if the user retains a reference to the request object.
+      buffers = []
+      bufferLength = 0
+    } else if (strings.length) {
+      // The UTF8 BOM [0xEF,0xBB,0xBF] is converted to [0xFE,0xFF] in the JS UTC16/UCS2 representation.
+      // Strip this value out when the encoding is set to 'utf8', as upstream consumers won't expect it and it breaks JSON.parse
+().
+      if (self.encoding === 'utf8' &amp;&amp; strings[0].length &gt; 0 &amp;&amp; strings[0][0] === '\uFEFF') {
+        strings[0] = strings[0].substring(1)
+      }
+      response.body = strings.join('')
+    }
+
+    if (self._json) {
+      try {
+        response.body = JSON.parse(response.body, self._jsonReviver)
+      } catch (e) {
+        debug('invalid JSON received', self.uri.href)
+      }
+    }
+    debug('emitting complete', self.uri.href)
+    if (typeof response.body === 'undefined' &amp;&amp; !self._json) {
+      response.body = self.encoding === null ? Buffer.alloc(0) : ''
+    }
+    self.emit('complete', response, response.body)
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.Request.prototype.resume" id="apidoc.element.request-promise-native.Request.prototype.resume">
+        function <span class="apidocSignatureSpan">request-promise-native.Request.prototype.</span>resume
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">resume = function () {
+  var self = this
+  if (!self.responseContent) {
+    self._paused = false
+  } else {
+    self.responseContent.resume.apply(self.responseContent, arguments)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.Request.prototype.start" id="apidoc.element.request-promise-native.Request.prototype.start">
+        function <span class="apidocSignatureSpan">request-promise-native.Request.prototype.</span>start
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">start = function () {
+  // start() is called once we are ready to send the outgoing HTTP request.
+  // this is usually called on the first write(), end() or on nextTick()
+  var self = this
+
+  if (self.timing) {
+    // All timings will be relative to this request's startTime.  In order to do this,
+    // we need to capture the wall-clock start time (via Date), immediately followed
+    // by the high-resolution timer (via now()).  While these two won't be set
+    // at the _exact_ same time, they should be close enough to be able to calculate
+    // high-resolution, monotonically non-decreasing timestamps relative to startTime.
+    var startTime = new Date().getTime()
+    var startTimeNow = now()
+  }
+
+  if (self._aborted) {
+    return
+  }
+
+  self._started = true
+  self.method = self.method || 'GET'
+  self.href = self.uri.href
+
+  if (self.src &amp;&amp; self.src.stat &amp;&amp; self.src.stat.size &amp;&amp; !self.hasHeader('content-length')) {
+    self.setHeader('content-length', self.src.stat.size)
+  }
+  if (self._aws) {
+    self.aws(self._aws, true)
+  }
+
+  // We have a method named auth, which is completely different from the http.request
+  // auth option.  If we don't remove it, we're gonna have a bad time.
+  var reqOptions = copy(self)
+  delete reqOptions.auth
+
+  debug('make request', self.uri.href)
+
+  // node v6.8.0 now supports a `timeout` value in `http.request()`, but we
+  // should delete it for now since we handle timeouts manually for better
+  // consistency with node versions before v6.8.0
+  delete reqOptions.timeout
+
+  try {
+    self.req = self.httpModule.request(reqOptions)
+  } catch (err) {
+    self.emit('error', err)
+    return
+  }
+
+  if (self.timing) {
+    self.startTime = startTime
+    self.startTimeNow = startTimeNow
+
+    // Timing values will all be relative to startTime (by comparing to startTimeNow
+    // so we have an accurate clock)
+    self.timings = {}
+  }
+
+  var timeout
+  if (self.timeout &amp;&amp; !self.timeoutTimer) {
+    if (self.timeout &lt; 0) {
+      timeout = 0
+    } else if (typeof self.timeout === 'number' &amp;&amp; isFinite(self.timeout)) {
+      timeout = self.timeout
+    }
+  }
+
+  self.req.on('response', self.onRequestResponse.bind(self))
+  self.req.on('error', self.onRequestError.bind(self))
+  self.req.on('drain', function() {
+    self.emit('drain')
+  })
+  self.req.on('socket', function(socket) {
+    // `._connecting` was the old property which was made public in node v6.1.0
+    var isConnecting = socket._connecting || socket.connecting
+    if (self.timing) {
+      self.timings.socket = now() - self.startTimeNow
+
+      if (isConnecting) {
+        var onLookupTiming = function() {
+          self.timings.lookup = now() - self.startTimeNow
+        }
+
+        var onConnectTiming = function() {
+          self.timings.connect = now() - self.startTimeNow
+        }
+
+        socket.once('lookup', onLookupTiming)
+        socket.once('connect', onConnectTiming)
+
+        // clean up timing event listeners if needed on error
+        self.req.once('error', function() {
+          socket.removeListener('lookup', onLookupTiming)
+          socket.removeListener('connect', onConnectTiming)
+        })
+      }
+    }
+
+    var setReqTimeout = function() {
+      // This timeout sets the amount of time to wait *between* bytes sent
+      // from the server once connected.
+      //
+      // In particular, it's useful for erroring if the server fails to send
+      // data halfway through streaming a response.
+      self.req.setTimeout(timeout, function () {
+        if (self.req) {
+          self.abort()
+          var e = new Error('ESOCKETTIMEDOUT')
+          e.code = 'ESOCKETTIMEDOUT'
+          e.connect = false
+          self.emit('error', e)
+        }
+      })
+    }
+    if (timeout !== undefined) {
+      // Only start the connection timer if we're actually connecting a new
+      // socket, otherwise if we're already connected (because this is a
+      // keep-alive connection) do not bother. This is important since we won't
+      // get a 'connect' event for an already connected socket.
+      if (isConnecting) {
+        var onReqSockConnect = function() { ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.Request.prototype.then" id="apidoc.element.request-promise-native.Request.prototype.then">
+        function <span class="apidocSignatureSpan">request-promise-native.Request.prototype.</span>then
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function RP$exposed() {
+    var self = bindTo || this;
+    return self[promisePropertyKey][methodToExpose].apply(self[promisePropertyKey], arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.Request.prototype.toJSON" id="apidoc.element.request-promise-native.Request.prototype.toJSON">
+        function <span class="apidocSignatureSpan">request-promise-native.Request.prototype.</span>toJSON
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function requestToJSON() {
+  var self = this
+  return {
+    uri: self.uri,
+    method: self.method,
+    headers: self.headers
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.Request.prototype.write" id="apidoc.element.request-promise-native.Request.prototype.write">
+        function <span class="apidocSignatureSpan">request-promise-native.Request.prototype.</span>write
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">write = function () {
+  var self = this
+  if (self._aborted) {return}
+
+  if (!self._started) {
+    self.start()
+  }
+  if (self.req) {
+    return self.req.write.apply(self.req, arguments)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.request-promise-native.errors" id="apidoc.module.request-promise-native.errors">module request-promise-native.errors</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.errors.RequestError" id="apidoc.element.request-promise-native.errors.RequestError">
+        function <span class="apidocSignatureSpan">request-promise-native.errors.</span>RequestError
+        <span class="apidocSignatureSpan">(cause, options, response)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function RequestError(cause, options, response) {
+
+    this.name = 'RequestError';
+    this.message = String(cause);
+    this.cause = cause;
+    this.error = cause; // legacy attribute
+    this.options = options;
+    this.response = response;
+
+    if (Error.captureStackTrace) { // required for non-V8 environments
+        Error.captureStackTrace(this);
+    }
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.errors.StatusCodeError" id="apidoc.element.request-promise-native.errors.StatusCodeError">
+        function <span class="apidocSignatureSpan">request-promise-native.errors.</span>StatusCodeError
+        <span class="apidocSignatureSpan">(statusCode, body, options, response)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function StatusCodeError(statusCode, body, options, response) {
+
+    this.name = 'StatusCodeError';
+    this.statusCode = statusCode;
+    this.message = statusCode + ' - ' + (JSON &amp;&amp; JSON.stringify ? JSON.stringify(body) : body);
+    this.error = body; // legacy attribute
+    this.options = options;
+    this.response = response;
+
+    if (Error.captureStackTrace) { // required for non-V8 environments
+        Error.captureStackTrace(this);
+    }
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.errors.TransformError" id="apidoc.element.request-promise-native.errors.TransformError">
+        function <span class="apidocSignatureSpan">request-promise-native.errors.</span>TransformError
+        <span class="apidocSignatureSpan">(cause, options, response)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function TransformError(cause, options, response) {
+
+    this.name = 'TransformError';
+    this.message = String(cause);
+    this.cause = cause;
+    this.error = cause; // legacy attribute
+    this.options = options;
+    this.response = response;
+
+    if (Error.captureStackTrace) { // required for non-V8 environments
+        Error.captureStackTrace(this);
+    }
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.request-promise-native.rp" id="apidoc.module.request-promise-native.rp">module request-promise-native.rp</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.rp.rp" id="apidoc.element.request-promise-native.rp.rp">
+        function <span class="apidocSignatureSpan">request-promise-native.</span>rp
+        <span class="apidocSignatureSpan">(uri, options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function request(uri, options, callback) {
+  if (typeof uri === 'undefined') {
+    throw new Error('undefined is not a valid uri or options object.')
+  }
+
+  var params = initParams(uri, options, callback)
+
+  if (params.method === 'HEAD' &amp;&amp; paramsHaveRequestBody(params)) {
+    throw new Error('HTTP HEAD requests MUST NOT include a request body.')
+  }
+
+  return new request.Request(params)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.rp.Request" id="apidoc.element.request-promise-native.rp.Request">
+        function <span class="apidocSignatureSpan">request-promise-native.rp.</span>Request
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Request(options) {
+  // if given the method property in options, set property explicitMethod to true
+
+  // extend the Request instance with any non-reserved properties
+  // remove any reserved functions from the options object
+  // set Request instance to be readable and writable
+  // call init
+
+  var self = this
+
+  // start with HAR, then override with additional options
+  if (options.har) {
+    self._har = new Har(self)
+    options = self._har.options(options)
+  }
+
+  stream.Stream.call(self)
+  var reserved = Object.keys(Request.prototype)
+  var nonReserved = filterForNonReserved(reserved, options)
+
+  extend(self, nonReserved)
+  options = filterOutReservedFunctions(reserved, options)
+
+  self.readable = true
+  self.writable = true
+  if (options.method) {
+    self.explicitMethod = true
+  }
+  self._qs = new Querystring(self)
+  self._auth = new Auth(self)
+  self._oauth = new OAuth(self)
+  self._multipart = new Multipart(self)
+  self._redirect = new Redirect(self)
+  self._tunnel = new Tunnel(self)
+  self.init(options)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.rp.cookie" id="apidoc.element.request-promise-native.rp.cookie">
+        function <span class="apidocSignatureSpan">request-promise-native.rp.</span>cookie
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">cookie = function (str) {
+  return cookies.parse(str)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.rp.defaults" id="apidoc.element.request-promise-native.rp.defaults">
+        function <span class="apidocSignatureSpan">request-promise-native.rp.</span>defaults
+        <span class="apidocSignatureSpan">(options, requester)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">defaults = function (options, requester) {
+  var self = this
+
+  options = options || {}
+
+  if (typeof options === 'function') {
+    requester = options
+    options = {}
+  }
+
+  var defaults      = wrapRequestMethod(self, options, requester)
+
+  var verbs = ['get', 'head', 'post', 'put', 'patch', 'del', 'delete']
+  verbs.forEach(function(verb) {
+    defaults[verb]  = wrapRequestMethod(self[verb], options, requester, verb)
+  })
+
+  defaults.cookie   = wrapRequestMethod(self.cookie, options, requester)
+  defaults.jar      = self.jar
+  defaults.defaults = self.defaults
+  return defaults
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.rp.del" id="apidoc.element.request-promise-native.rp.del">
+        function <span class="apidocSignatureSpan">request-promise-native.rp.</span>del
+        <span class="apidocSignatureSpan">(uri, options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">del = function (uri, options, callback) {
+  var params = initParams(uri, options, callback)
+  params.method = method
+  return request(params, params.callback)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.rp.delete" id="apidoc.element.request-promise-native.rp.delete">
+        function <span class="apidocSignatureSpan">request-promise-native.rp.</span>delete
+        <span class="apidocSignatureSpan">(uri, options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">delete = function (uri, options, callback) {
+  var params = initParams(uri, options, callback)
+  params.method = method
+  return request(params, params.callback)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.rp.forever" id="apidoc.element.request-promise-native.rp.forever">
+        function <span class="apidocSignatureSpan">request-promise-native.rp.</span>forever
+        <span class="apidocSignatureSpan">(agentOptions, optionsArg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">forever = function (agentOptions, optionsArg) {
+  var options = {}
+  if (optionsArg) {
+    extend(options, optionsArg)
+  }
+  if (agentOptions) {
+    options.agentOptions = agentOptions
+  }
+
+  options.forever = true
+  return request.defaults(options)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.rp.get" id="apidoc.element.request-promise-native.rp.get">
+        function <span class="apidocSignatureSpan">request-promise-native.rp.</span>get
+        <span class="apidocSignatureSpan">(uri, options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get = function (uri, options, callback) {
+  var params = initParams(uri, options, callback)
+  params.method = method
+  return request(params, params.callback)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.rp.head" id="apidoc.element.request-promise-native.rp.head">
+        function <span class="apidocSignatureSpan">request-promise-native.rp.</span>head
+        <span class="apidocSignatureSpan">(uri, options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">head = function (uri, options, callback) {
+  var params = initParams(uri, options, callback)
+  params.method = method
+  return request(params, params.callback)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.rp.initParams" id="apidoc.element.request-promise-native.rp.initParams">
+        function <span class="apidocSignatureSpan">request-promise-native.rp.</span>initParams
+        <span class="apidocSignatureSpan">(uri, options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function initParams(uri, options, callback) {
+  if (typeof options === 'function') {
+    callback = options
+  }
+
+  var params = {}
+  if (typeof options === 'object') {
+    extend(params, options, {uri: uri})
+  } else if (typeof uri === 'string') {
+    extend(params, {uri: uri})
+  } else {
+    extend(params, uri)
+  }
+
+  params.callback = callback || params.callback
+  return params
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.rp.jar" id="apidoc.element.request-promise-native.rp.jar">
+        function <span class="apidocSignatureSpan">request-promise-native.rp.</span>jar
+        <span class="apidocSignatureSpan">(store)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">jar = function (store) {
+  return cookies.jar(store)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.rp.patch" id="apidoc.element.request-promise-native.rp.patch">
+        function <span class="apidocSignatureSpan">request-promise-native.rp.</span>patch
+        <span class="apidocSignatureSpan">(uri, options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">patch = function (uri, options, callback) {
+  var params = initParams(uri, options, callback)
+  params.method = method
+  return request(params, params.callback)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.rp.post" id="apidoc.element.request-promise-native.rp.post">
+        function <span class="apidocSignatureSpan">request-promise-native.rp.</span>post
+        <span class="apidocSignatureSpan">(uri, options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">post = function (uri, options, callback) {
+  var params = initParams(uri, options, callback)
+  params.method = method
+  return request(params, params.callback)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.request-promise-native.rp.put" id="apidoc.element.request-promise-native.rp.put">
+        function <span class="apidocSignatureSpan">request-promise-native.rp.</span>put
+        <span class="apidocSignatureSpan">(uri, options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">put = function (uri, options, callback) {
+  var params = initParams(uri, options, callback)
+  params.method = method
+  return request(params, params.callback)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
