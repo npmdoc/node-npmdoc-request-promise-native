@@ -1,6 +1,6 @@
 # npmdoc-request-promise-native
 
-#### api documentation for  [request-promise-native (v1.0.3)](https://github.com/request/request-promise-native#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-request-promise-native.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-request-promise-native) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-request-promise-native.svg)](https://travis-ci.org/npmdoc/node-npmdoc-request-promise-native)
+#### basic api documentation for  [request-promise-native (v1.0.3)](https://github.com/request/request-promise-native#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-request-promise-native.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-request-promise-native) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-request-promise-native.svg)](https://travis-ci.org/npmdoc/node-npmdoc-request-promise-native)
 
 #### The simplified HTTP request client 'request' with Promise support. Powered by native ES6 promises.
 
@@ -21,46 +21,18 @@
 ```json
 
 {
-    "name": "request-promise-native",
-    "version": "1.0.3",
-    "description": "The simplified HTTP request client 'request' with Promise support. Powered by native ES6 promises.",
-    "keywords": [
-        "xhr",
-        "http",
-        "https",
-        "promise",
-        "request",
-        "then",
-        "thenable",
-        "native"
-    ],
-    "main": "./lib/rp.js",
-    "scripts": {
-        "test": "./node_modules/.bin/gulp ci",
-        "test-publish": "./node_modules/.bin/gulp ci-no-cov",
-        "publish-please": "publish-please",
-        "prepublish": "publish-please guard"
+    "author": {
+        "name": "Nicolai Kamenzky",
+        "url": "https://github.com/analog-nico"
     },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/request/request-promise-native.git"
-    },
-    "author": "Nicolai Kamenzky (https://github.com/analog-nico)",
-    "license": "ISC",
     "bugs": {
         "url": "https://github.com/request/request-promise-native/issues"
-    },
-    "homepage": "https://github.com/request/request-promise-native#readme",
-    "engines": {
-        "node": ">=0.12.0"
     },
     "dependencies": {
         "request-promise-core": "1.1.1",
         "stealthy-require": "^1.0.0"
     },
-    "peerDependencies": {
-        "request": "^2.34"
-    },
+    "description": "The simplified HTTP request client 'request' with Promise support. Powered by native ES6 promises.",
     "devDependencies": {
         "body-parser": "~1.15.2",
         "chai": "~3.5.0",
@@ -75,7 +47,54 @@
         "request": "^2.34.0",
         "rimraf": "~2.5.3",
         "run-sequence": "~1.2.2"
-    }
+    },
+    "directories": {},
+    "dist": {
+        "shasum": "9cb2b2f69f137e4acf35116a08a441cbfd0c0134",
+        "tarball": "https://registry.npmjs.org/request-promise-native/-/request-promise-native-1.0.3.tgz"
+    },
+    "engines": {
+        "node": ">=0.12.0"
+    },
+    "gitHead": "700d1fb2d3543bbf5cccb21489ae882a33cb213e",
+    "homepage": "https://github.com/request/request-promise-native#readme",
+    "keywords": [
+        "xhr",
+        "http",
+        "https",
+        "promise",
+        "request",
+        "then",
+        "thenable",
+        "native"
+    ],
+    "license": "ISC",
+    "main": "./lib/rp.js",
+    "maintainers": [
+        {
+            "name": "analog-nico"
+        },
+        {
+            "name": "request"
+        }
+    ],
+    "name": "request-promise-native",
+    "optionalDependencies": {},
+    "peerDependencies": {
+        "request": "^2.34"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/request/request-promise-native.git"
+    },
+    "scripts": {
+        "prepublish": "publish-please guard",
+        "publish-please": "publish-please",
+        "test": "gulp ci",
+        "test-publish": "gulp ci-no-cov"
+    },
+    "version": "1.0.3",
+    "bin": {}
 }
 ```
 
