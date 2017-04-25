@@ -9,6 +9,6 @@
 <tspan x="10" y="106">  ├── UNMET PEER DEPENDENCY request@^2.34</tspan>
 <tspan x="10" y="122">  ├─┬ request-promise-core@1.1.1 </tspan>
 <tspan x="10" y="138">  │ └── lodash@4.17.4 </tspan>
-<tspan x="10" y="154">  └── stealthy-require@1.0.0</tspan>
+<tspan x="10" y="154">  └── stealthy-require@1.1.0</tspan>
 </text>
 </svg>
